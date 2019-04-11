@@ -16,7 +16,6 @@ function mergeSort(array, count = 0) {
   if (count) {
     console.log(array);
     console.log(array.length);
-    debugger;
   }
 
   return merge(left, right, array);
@@ -161,6 +160,10 @@ function displayList(list){
     return arr;
   }
 
+function sortBooks(array){
+    return qSort(array);
+}
+
 function main() {
   let unsortedArray = [
     89,
@@ -268,11 +271,11 @@ function main() {
   //mergeSort(array);
   //console.log(qSort(unsortedArray));
   //console.log(mSort(unsortedArray));
-    let newMergeList = new LinkedList();
-    for(let i = 0; i < unsortedArray.length; i++){
-        console.log(unsortedArray[i]);
-        newMergeList.insertLast(unsortedArray[i]);
-    }
+    // let newMergeList = new LinkedList();
+    // for(let i = 0; i < unsortedArray.length; i++){
+    //     console.log(unsortedArray[i]);
+    //     newMergeList.insertLast(unsortedArray[i]);
+    // }
   //   console.log(newMergeList);
   //   console.log(bucketSort([5, 4, 3, 2, 1]));
   //   console.log(Math.floor(Math.random() * 2));
@@ -280,7 +283,9 @@ function main() {
   //   console.log(Math.floor(Math.random() * 2));
   //   console.log(Math.floor(Math.random() * 2));
   // console.log(randomBubble([1, 2, 3, 4, 5]));
-  console.log(mergeSort(displayList(newMergeList)));
+//   console.log(mergeSort(displayList(newMergeList)));
+  console.log(sortBooks(['abd', 'abc']));
+  console.log('abc' > 'abd')
 }
 
 main();
